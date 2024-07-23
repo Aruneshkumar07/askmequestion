@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Box</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #346362;
+}
+.message-box {
+    position: relative;
+    width: 300px;
+    padding: 60px;
+    background-color: #61bfbe;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.message-image {
+    position: absolute;
+    top: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.message-box input {
+    margin-top: 30px; 
+}
+.message-box :hover{
+box-shadow: 20px 20px 60px;
+}
+button{
+    margin: 15px 20px;
+    width: 35%;
+    padding: 5px 0px;
+}
+input{
+    padding: 30px 70px;
+}
+button:hover{
+    background-color: #346362;
+    color: white;
+    box-shadow: 20px 20px 60px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <img src="https://w7.pngwing.com/pngs/713/762/png-transparent-computer-icons-button-login-image-file-formats-logo-monochrome.png" alt="Image" class="message-image">
+        <h1>Ask me a Question!</h1>
+        <input id="input" placeholder="Type Something..."><br><br>
+        <button onclick="change()" id="but1" >Accept</button>
+        <button onclick="change1()" id="but2">Decline</button>
+    </div>
+</body>
+<script>
+    function change(){
+       let input= document.getElementById("input")
+       let message=input.value;
+       if(message=='')
+       alert("Input field cannot be empty");
+        else
+        alert("Your Form submitted Successfully")
+    }
+    function change1(){
+        document.getElementById("but2")
+        alert("Your form is not submitted")
+    }
+
+</script>
+</html>
